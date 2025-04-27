@@ -57,8 +57,7 @@ export default function MediaDetail() {
             About the Pooja
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            {getData.fullDescription ||
-              "This pooja is conducted with utmost devotion and rituals to bring peace, prosperity, and positivity to your life."}
+            {getData.fullDescription}
           </p>
         </div>
       </div>

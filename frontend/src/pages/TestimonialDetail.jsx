@@ -27,7 +27,7 @@ export default function TestimonialDetail() {
         {/* Stars */}
         <div className="flex justify-center mb-4">
           {Array.from({ length: testimonial.rating }).map((_, index) => (
-            <span key={index} className="text-yellow-400 text-xl">
+            <span key={index} className=" text-xl">
               ★
             </span>
           ))}
