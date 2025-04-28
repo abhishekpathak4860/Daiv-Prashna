@@ -1,7 +1,12 @@
 import { useParams } from "react-router-dom";
 import testimonialsData from "../testimonialData";
+import { useEffect } from "react";
 
 export default function TestimonialDetail() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { id } = useParams();
   const testimonial = testimonialsData.find((t) => t._id === id);
 

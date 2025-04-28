@@ -1,10 +1,14 @@
-import React from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { mainGuru } from "../LineageDetails";
 import { disciples } from "../LineageDetails";
 
 export default function LineageDetail() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   let data = null;
   if (id === "mainGuru") {

@@ -13,6 +13,10 @@ export default function LineageTree() {
     <div
       className="p-12 md:p-6 sm:p-10 bg-white min-h-screen flex flex-col items-center   overflow-x-hidden"
       style={{ backgroundColor: "#FFFDD0" }}
+      infinite={true}
+      autoPlay={true}
+      autoPlaySpeed={3000}
+      transitionDuration={500}
     >
       {/* Mahaguru */}
 

@@ -1,9 +1,14 @@
 import { useParams } from "react-router-dom";
 import mediaData from "../mediaData";
+import { useEffect } from "react";
 
 export default function MediaDetail() {
   const { id } = useParams();
   const getData = mediaData.find((data) => data._id === id);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!getData) {
     return (

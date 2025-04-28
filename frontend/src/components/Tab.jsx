@@ -276,7 +276,6 @@ const TabsComponent = () => {
                   </div>
                   <p
                     onClick={(e) => {
-                      e.stopPropagation(); // Prevent card click
                       handleMedia(t._id);
                     }}
                     className="text-blue-600  text-sm mt-2 font-bold flex items-center justify-center"
@@ -337,7 +336,6 @@ const TabsComponent = () => {
                     {/* Detail Link */}
                     <p
                       onClick={(e) => {
-                        e.stopPropagation(); // Prevent card click
                         handleTestimonial(t._id);
                       }}
                       className="text-blue-600  text-sm mt-2 font-bold flex items-center justify-center"
@@ -392,7 +390,6 @@ const TabsComponent = () => {
                   </div>
                   <p
                     onClick={(e) => {
-                      e.stopPropagation(); // Prevent card click
                       handleArticles(t._id);
                     }}
                     className="text-blue-600  text-sm mt-2 font-bold flex items-center justify-center"

@@ -1,9 +1,14 @@
-import React from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import articlesData from "../articlesData";
 
 export default function ArticlesDetails() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const getData = articlesData.find((data) => data._id === id);
 
   if (!getData) {
