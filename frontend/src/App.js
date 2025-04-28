@@ -24,6 +24,7 @@ import TestimonialDetail from "./pages/TestimonialDetail";
 import MediaDetail from "./pages/MediaDetail";
 import ArticlesDetails from "./pages/ArticlesDetails";
 import LineageDetail from "./pages/LineageDetail";
+import PaymentEmailSent from "./pages/PaymentEmailSent";
 
 const App = () => {
   const location = useLocation();
@@ -41,6 +42,7 @@ const App = () => {
           <Route path="/shraddha" element={<Shradha />} />
           <Route path="/vastu" element={<Vastu />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/emailsent" element={<PaymentEmailSent />} />
           <Route path="/lineage" element={<Lineage />} />
           <Route path="/mission" element={<Mission />} />
           <Route path="/sadanand" element={<Sadanand />} />
