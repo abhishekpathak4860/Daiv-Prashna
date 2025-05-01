@@ -30,7 +30,7 @@ const Node = ({ label, name = "Name", children = [], details, image }) => {
               View Details
             </div>
           </div>
-          <div className="w-0.5 h-8 bg-gray-400 mb-2 z-0 absolute top-45 md:top-65" />
+          <div className="w-0.5 h-6 bg-gray-400 mb-2  absolute top-45 top-[175px] md:top-[267px]" />
         </>
       ) : (
         <div
