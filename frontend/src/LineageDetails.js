@@ -26,14 +26,19 @@ export const disciples = [
       },
       {
         name: "Sub 1C",
-        details:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit eum atque nemo distinctio! Eveniet ut sapiente amet temporibus molestiae omnis soluta at odit quisquam cum harum rem reprehenderit, veniam cumque officia dicta exercitationem hic tempora. Magnam, beatae! Quia tempore consectetur harum, repudiandae cumque veniam?",
+        details: "Lorem ",
         image: "guru.jpg",
+        sub1: [
+          {
+            name: "Sub 1C",
+            details: "Lorem ",
+            image: "guru.jpg",
+          },
+        ],
       },
       {
         name: "Sub 1D",
-        details:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit eum atque nemo distinctio! Eveniet ut sapiente amet temporibus molestiae omnis soluta at odit quisquam cum harum rem reprehenderit, veniam cumque officia dicta exercitationem hic tempora. Magnam, beatae! Quia tempore consectetur harum, repudiandae cumque veniam?",
+        details: "Lorem ",
         image: "guru.jpg",
       },
     ],
@@ -69,6 +74,7 @@ export const disciples = [
         image: "guru.jpg",
       },
     ],
+    // sub: [],
   },
   {
     name: "Follower 3",
@@ -135,3 +141,5 @@ export const disciples = [
     ],
   },
 ];
+
+// LineageDetails.js

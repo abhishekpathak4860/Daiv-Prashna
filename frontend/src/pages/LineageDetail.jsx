@@ -1,57 +1,30 @@
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { mainGuru } from "../LineageDetails";
-import { disciples } from "../LineageDetails";
+import React from "react";
+import { useLocation, useParams } from "react-router-dom";
 
 export default function LineageDetail() {
-  const { id } = useParams();
+  const { state } = useLocation();
+  const { label } = useParams();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  if (!state) {
+    return (
+      <div className="p-6">
+        <h2 className="text-xl font-bold">No data found for person {label}</h2>
+      </div>
+    );
+  }
 
-  let data = null;
-  if (id === "mainGuru") {
-    data = mainGuru;
-  } else {
-    // search in disciples now
-    for (let i = 0; i < disciples.length; i++) {
-      if (`disciple-${i}` === id) {
-        data = disciples[i];
-        break;
-      }
-      for (let j = 0; j < disciples[i].sub.length; j++) {
-        if (`sub-${i}-${j}` === id) {
-          data = disciples[i].sub[j];
-          break;
-        }
-      }
-      if (data) break;
-    }
-  }
-  if (!data) {
-    return <div>LineageDetail not found</div>;
-  }
+  const { name, details, image } = state;
 
   return (
-    <div className=" flex flex-col items-center justify-center p-4 bg-[rgb(255,255,240)] min-h-screen">
-      <div className="max-w-md mx-auto mt-12 bg-white rounded-2xl p-8 mb-4 text-center shadow-lg">
-        <div className="w-28 h-28 mx-auto overflow-hidden rounded-full">
-          <img
-            src={`/${data.image}`}
-            alt={data.name}
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <h2 className="mt-6 text-2xl font-semibold text-gray-800">
-          {data.name}
-        </h2>
-
-        <p className="mt-4 text-gray-600 italic leading-relaxed">
-          {data.details}
-        </p>
-        <div></div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+      <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
+        <img
+          src={`/${image}`}
+          alt={`Node ${label}`}
+          className="w-full h-full object-cover rounded-full"
+        />
+        <h2 className="text-xl font-bold mb-2">{name}</h2>
+        <p className="text-gray-600 mb-4">{details}</p>
       </div>
     </div>
   );

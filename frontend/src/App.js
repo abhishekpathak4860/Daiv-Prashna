@@ -44,6 +44,7 @@ const App = () => {
           <Route path="/payment" element={<Payment />} />
           <Route path="/emailsent" element={<PaymentEmailSent />} />
           <Route path="/lineage" element={<Lineage />} />
+          <Route path="/details/:label" element={<LineageDetail />} />
           <Route path="/mission" element={<Mission />} />
           <Route path="/sadanand" element={<Sadanand />} />
           <Route path="/privacy_policy" element={<PrivacyPolicy />} />
